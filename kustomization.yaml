@@ -5,6 +5,7 @@ resources:
   - ingress/base/nginx
   - monitor
   - alert-manager-webhook
+  - database
 
 patchesStrategicMerge:
   - patches/nginx/default-cert-patch.yaml
