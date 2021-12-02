@@ -1,16 +1,4 @@
 deploy_yaml(
-    yaml=kustomize("."),
-    name="init"
+    yaml=kustomize("./database"),
+    name="database"
 )
-
-if bool(env("GPU_AWS")):
-    deploy_yaml(
-        yaml=kustomize("./gpu/base/aws"),
-        name="gpu-aws"
-    )
-
-if bool(env("GPU_GKE")):
-    deploy_yaml(
-        yaml=kustomize("./gpu/base/gke"),
-        name="gpu-gke"
-    )
