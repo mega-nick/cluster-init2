@@ -2,3 +2,8 @@ deploy_yaml(
     yaml=kustomize("./database"),
     name="database"
 )
+
+deploy_yaml(
+    yaml=kustomize("./grafana"),
+    name="grafana"
+)

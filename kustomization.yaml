@@ -6,6 +6,7 @@ resources:
   - monitor
   - alert-manager-webhook
   - database
+  - grafana
 
 patchesStrategicMerge:
   - patches/nginx/default-cert-patch.yaml
