@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - namespace.yaml
+- db\mongodb.yaml
 - prometheus
 - alertmanager
 
