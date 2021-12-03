@@ -165,15 +165,6 @@ metadata:
     app.kubernetes.io/instance: grafana
     app.kubernetes.io/version: "8.2.5"
     app.kubernetes.io/managed-by: Helm
-data:
-  run.sh: |-
-    @test "Test Health" {
-      url="http://grafana2/api/health"
-
-      code=$(wget --server-response --spider --timeout 10 --tries 1 ${url} 2>&1 | awk '/^  HTTP/{print $2}')
-      [ "$code" == "200" ]
-    }
----
 # Source: grafana/templates/clusterrole.yaml
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
